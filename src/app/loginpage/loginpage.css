@@ -1,0 +1,82 @@
+.page {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    max-width: 25%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f5f7fa;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+    border-color: #667eea;
+    background: #fff;
+}
+
+.input-group svg {
+    width: 20px;
+    height: 20px;
+    fill: #667eea;
+    flex-shrink: 0;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 1rem;
+    outline: none;
+    color: #333;
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #667eea;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #5563d6;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}

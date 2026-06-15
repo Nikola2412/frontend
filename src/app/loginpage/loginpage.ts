@@ -1,11 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-loginpage',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './loginpage.html',
   styleUrl: './loginpage.css',
 })
 export class Loginpage{
+  username = '';
+  password = '';
+
+  login(){
+    //alert(this.username + " "+  this.password);
+  }
 }
