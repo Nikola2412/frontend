@@ -46,3 +46,10 @@ body {
 .navbar .right:hover {
     background: #059669;
 }
+
+.login-active {
+    display: none;
+}
+.test{
+    transform: scale(5.0);
+}

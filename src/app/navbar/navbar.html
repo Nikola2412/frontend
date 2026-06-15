@@ -1,4 +1,9 @@
 <div class="navbar">
-  <a href="#" class="active">Home</a>
-  <a href="/login" class="right">Login</a>
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    Home
+  </a>
+
+  <a routerLink="/login" routerLinkActive="login-active" class="right">
+    Login
+  </a>
 </div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import {  RouterOutlet } from '@angular/router';
 import { Navbar } from "./navbar/navbar";
 
 @Component({
@@ -10,5 +10,5 @@ import { Navbar } from "./navbar/navbar";
   styleUrl: './app.css'
 })
 export class App{
-  title ='SportSphere';
+  title = 'SportSphere';
 }
