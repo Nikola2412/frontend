@@ -1,0 +1,48 @@
+body {
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    background: #1e293b;
+    padding: 8px 12px;
+    border-radius: 16px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background: #334155;
+    color: white;
+}
+
+.navbar .active {
+    background: #3b82f6;
+    color: white;
+}
+
+.navbar .active:hover {
+    background: #2563eb;
+}
+
+.navbar .right {
+    margin-left: auto;
+    background: #10b981;
+    color: white;
+}
+
+.navbar .right:hover {
+    background: #059669;
+}
