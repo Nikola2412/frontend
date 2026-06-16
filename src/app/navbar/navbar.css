@@ -29,12 +29,23 @@
     background: rgba(255, 255, 255, 0.35);
 }
 
-.navbar .right {
-    margin-left: auto;
+.navbar .login {
+    margin-left: 20px;
+    margin-right: 0;
     background: var(--main-color-dark);
 }
+.navbar .search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.navbar .search svg{
+    width: 25px;
+    filter: invert(100%);
+}
 
-.navbar .right:hover {
+.navbar .login:hover {
     background: #4453c7;
 }
 
