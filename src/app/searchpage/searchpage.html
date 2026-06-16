@@ -1,0 +1,46 @@
+<div class="page">
+  <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <h1>Facility search</h1>
+
+    <div class="input-group">
+      <label>Facility name</label>
+      <input
+        type="text"
+        formControlName="nazivObjekta"
+        placeholder="Enter facility name">
+    </div>
+
+    <div class="input-group">
+      <label>Cities</label>
+      <select formControlName="gradovi" multiple>
+        <option *ngFor="let grad of cities" [value]="grad">
+          {{ grad }}
+        </option>
+      </select>
+      <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple cities.</small>
+    </div>
+
+    <div class="input-group">
+      <label>Sport</label>
+      <select formControlName="sport">
+        <option value="">Choose sport</option>
+        <option *ngFor="let sport of sports" [value]="sport">
+          {{ sport }}
+        </option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Type</label>
+      <select formControlName="tipTerena">
+        <option value="">Choose type</option>
+        <option value="OTVORENI">Open</option>
+        <option value="ZATVORENI">Closed</option>
+      </select>
+    </div>
+
+    <button type="submit">
+      Search
+    </button>
+  </form>
+</div>
