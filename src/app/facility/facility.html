@@ -1,15 +1,17 @@
-<h1>Sportski objekti</h1>
-<h3>Ukupan broj objekata: {{sum}}</h3>
+<div class="container">
+    <h1>Sportski objekti</h1>
+    <h3>Ukupan broj objekata: {{sum}}</h3>
 
-<div class="cards-container">
-    @for(f of facilities; track f.name){
-    <div class="card">
-        <h3>{{f.name}}</h3>
+    <div class="cards-container">
+        @for(f of facilities; track f.name){
+        <div class="card">
+            <h3>{{f.name}}</h3>
 
-        <div class="card-footer">
-            <p class="desc">{{f.description}}</p>
-            <p class="likes">👍{{f.likes}}</p>
+            <div class="card-footer">
+                <p class="desc">{{f.description}}</p>
+                <p class="likes">👍{{f.likes}}</p>
+            </div>
         </div>
+        }
     </div>
-    }
 </div>

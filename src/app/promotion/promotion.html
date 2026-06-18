@@ -1,0 +1,13 @@
+<div class="container">
+    
+    <h1>Top promotion</h1>
+
+    <div class="cards-container">
+        @for(cp of current_promotion; track cp.name){
+        <div class="card">
+            <h3>{{cp.name}}</h3>
+        </div>
+        }
+    </div>
+
+</div>
