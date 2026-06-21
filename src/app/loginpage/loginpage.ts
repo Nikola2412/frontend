@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserService } from '../services/user-service';
 
 @Component({
   selector: 'app-loginpage',
@@ -9,10 +10,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './loginpage.css',
 })
 export class Loginpage{
+  private userService = inject(UserService)
   username = '';
   password = '';
 
   login(){
-    //alert(this.username + " "+  this.password);
+    this.userService.login(this.username,this.password).subscribe(data=>{
+      console.log("dadasd")
+    });
   }
 }
