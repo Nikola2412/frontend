@@ -1,11 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../services/user-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-loginpage',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,RouterLink],
   templateUrl: './loginpage.html',
   styleUrl: './loginpage.css',
 })

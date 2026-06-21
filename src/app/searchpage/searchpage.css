@@ -2,13 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-}
-
 .page {
-    height: fit-content;
     min-height: 80vh;
     display: flex;
     justify-content: center;
@@ -56,6 +50,7 @@ h1 {
     background: #fff;
     color: #2d3748;
     transition: all 0.25s ease;
+    
 }
 
 .input-group input:focus,
@@ -65,7 +60,6 @@ h1 {
     box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
 }
 
-/* Custom dropdown arrow */
 .input-group select:not([multiple]) {
     appearance: none;
     -webkit-appearance: none;
@@ -79,19 +73,18 @@ h1 {
     cursor: pointer;
 }
 
-
-/* Multiple select */
 .input-group select[multiple] {
+    height: auto;
     min-height: 150px;
-    cursor: pointer;
+    padding: 10px;
 }
 
 .input-group select[multiple] option {
     padding: 10px;
-    border-radius: 6px;
 }
 
-.input-group select[multiple] option:checked {
+.input-group select[multiple] option:checked,
+.input-group select[multiple] option:hover {
     background: #667eea;
     color: white;
 }
@@ -126,8 +119,4 @@ button:hover {
 
 button:active {
     transform: translateY(0);
-}
-
-.sport option {
-    background: #f7fafc;
 }

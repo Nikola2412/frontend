@@ -1,1 +1,106 @@
-<p>registerpage works!</p>
+<div class="page">
+  <form class="register-form" (ngSubmit)="register()" #f="ngForm">
+
+    <h1>Registration</h1>
+
+    <!-- USER TYPE -->
+    <div class="input-group">
+      <label>Account type</label>
+      <select [(ngModel)]="userType" name="userType" required>
+        <option value="athlete">Athlete</option>
+        <option value="employee">Employee</option>
+      </select>
+    </div>
+
+    <!-- BASIC INFO -->
+    <div class="input-group">
+      <input type="text" name="username" placeholder="Username (unique)" required [(ngModel)]="username">
+    </div>
+
+    <div class="input-group">
+      <input type="password" name="password" placeholder="Password" required [(ngModel)]="password">
+    </div>
+
+    <div class="input-group">
+      <input type="text" name="firstName" placeholder="First Name" required [(ngModel)]="firstName">
+    </div>
+
+    <div class="input-group">
+      <input type="text" name="lastName" placeholder="Last Name" required [(ngModel)]="lastName">
+    </div>
+
+    <div class="input-group">
+      <input type="tel" name="phone" placeholder="Phone number" required [(ngModel)]="phone">
+    </div>
+
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Email (unique)" required [(ngModel)]="email">
+    </div>
+
+    <div class="input-group file-group">
+      <label for="profileImage">Profile image</label>
+
+      <input
+        id="profileImage"
+        class="file-input"
+        type="file"
+        accept="image/*"
+        (change)="onFileSelected($event)"
+      >
+       <label for="profileImage" class="file-upload-btn">
+        Choose Image
+      </label>
+      <span class="file-name">
+        {{ selectedFile?.name || 'No file selected' }}
+      </span>
+
+      <small>No external links allowed</small>
+
+      <div class="image-preview" *ngIf="profileImageUrl">
+        <img [src]="profileImageUrl" alt="Profile preview">
+      </div>
+    </div>
+
+    <button type="button" class="avatar-btn" (click)="generateAvatar()">
+      Generate Avatar
+    </button>
+
+    <!-- SPORTS (MAX 5) -->
+    <div class="input-group">
+      <label>Select sports (max 5)</label>
+      <select multiple [(ngModel)]="selectedSports" name="sports">
+        <option *ngFor="let sport of sportsList" [value]="sport">
+          {{ sport }}
+        </option>
+      </select>
+    </div>
+
+    <!-- EMPLOYEE FIELDS -->
+    <div *ngIf="userType === 'employee'">
+
+      <div class="input-group">
+        <input type="text" name="facilityName" placeholder="Sports facility name" [(ngModel)]="facilityName">
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="address" placeholder="Address" [(ngModel)]="address">
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="mb" placeholder="Company ID (8 digits)" maxlength="8" [(ngModel)]="mb">
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="pib" placeholder="Tax ID (9 digits, not starting with 0)" maxlength="9" [(ngModel)]="pib">
+      </div>
+
+    </div>
+
+    <button type="submit">Create Account</button>
+
+    <div class="links">
+      <a routerLink="/login">Already have an account?</a>
+    </div>
+
+  </form>
+</div>
